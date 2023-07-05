@@ -7,3 +7,4 @@ profound communication skills that lead and inspire the team and company.
 
 ## Resume
 [Link to Resume](https://drive.google.com/file/d/1Q--ekljk0L_ih0kkjcRhOLyu3gP6upjU/view?usp=sharing)
+
