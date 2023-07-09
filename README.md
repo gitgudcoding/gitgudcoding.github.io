@@ -7,3 +7,7 @@ Recognized for the ability to build relationships with key personnel using profo
 ## Resume
 [Link to Resume](https://drive.google.com/file/d/1nwgmD_oLFdUNI-lavPyt5yMc-PU3tIyr/view?usp=sharing)
 
+## Skill
+| Hard  | Google Sheet, Excel, MySQL, Looker Studio, Power BI, Python, JavaScript, Adobe Photoshop  |
+| Soft  | Adaptive, Critical thinking, Relationship Builder, Leadership, Project Management, Attention to details  |
+
