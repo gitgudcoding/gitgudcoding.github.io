@@ -30,8 +30,8 @@ Recognized for the ability to build relationships with key personnel using profo
     - Ads Campaign: [Google Sheets](https://docs.google.com/spreadsheets/d/1fk9GCI8qUoEDceJkKiozZqUHPvUtqXsglgPUWy9Ys00/edit#gid=0)
     - Subscriber Status: [Google Sheets](https://docs.google.com/spreadsheets/d/1LK8hu4rqJrEYZoenyxN9AZSEBvD1mcgEq_ZD0u3Tp2I/edit?pli=1#gid=1288018274)
   * Scripts
-    - Python: [python_to_gsheet.py](assets/scripts/python_to_gsheet.py)
-    - Apps Script: [generateGoogleAdsLocation.gy](assets/scripts/generateGoogleAdsLocation.gs)
+    - Python: [python_to_gsheet.py](assets/scripts/python_to_gsheet.py) (web scraping)
+    - Apps Script: [generateGoogleAdsLocation.gy](assets/scripts/generateGoogleAdsLocation.gs), [generateCityStateLevel.gs](assets/scripts/generateCityStateLevel.gs)
   * How It Works
     - Using scripts and formulas (please see below)
   
@@ -100,7 +100,7 @@ Recognized for the ability to build relationships with key personnel using profo
       Since ```RANDARRAY()``` randomizes data each time changes has been made in the worksheet, we need to capture its data and paste it as a static value. We will be using the [generateGoogleAdsLocation.gy](assets/scripts/generateGoogleAdsLocation.gs) script to produce a static data.
 
 
-  5. Create a [Subscriber Status](https://docs.google.com/spreadsheets/d/1LK8hu4rqJrEYZoenyxN9AZSEBvD1mcgEq_ZD0u3Tp2I/edit?pli=1#gid=1288018274) worksheet. Generate names using [python_to_gsheet.py](assets/scripts/python_to_gsheet.py) by web scraping most common names in [namecensus.com](namecensus.com).
+  5. Create a [Subscriber Status](https://docs.google.com/spreadsheets/d/1LK8hu4rqJrEYZoenyxN9AZSEBvD1mcgEq_ZD0u3Tp2I/edit?pli=1#gid=1288018274) worksheet. Generate names using [python_to_gsheet.py](assets/scripts/python_to_gsheet.py) by web scraping most common names in namecensus.com and using [generateCityStateLevel.gs](assets/scripts/generateCityStateLevel.gs) script to pipulate City, State and Level for each subscriber.
 
   6. Connect [Subscriber Status](https://docs.google.com/spreadsheets/d/1LK8hu4rqJrEYZoenyxN9AZSEBvD1mcgEq_ZD0u3Tp2I/edit?pli=1#gid=1288018274) worksheet to [Looker Studio](https://lookerstudio.google.com/reporting/c085222c-25ec-4874-aa92-b92bcbaa3f00/page/GKZWD).
     
