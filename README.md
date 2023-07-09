@@ -16,8 +16,10 @@ Recognized for the ability to build relationships with key personnel using profo
 
 <details>
   <summary>Subscriber Report Dashboard</summary>
+ 
   ### Overview
   [Link Here](https://lookerstudio.google.com/reporting/c085222c-25ec-4874-aa92-b92bcbaa3f00/page/GKZWD)
+  
   <picture>
     <img alt="Subscriber Report" src="assets/images/subscriber-report.PNG" width=800>
   </picture>
