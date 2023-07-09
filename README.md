@@ -17,15 +17,12 @@ Recognized for the ability to build relationships with key personnel using profo
 <details>
   <summary>Subscriber Report Dashboard</summary>
 
-### You can add a header
-
-You can add text within a collapsed section. 
-
-You can add an image or a code block, too.
-
-```ruby
-   puts "Hello World"
-```
+  ### Overview
+  [Link Here](https://lookerstudio.google.com/reporting/c085222c-25ec-4874-aa92-b92bcbaa3f00/page/GKZWD)
+  
+  <picture>
+    <img alt="Subscriber Report" src="assets/images/subscriber-report.PNG" width=800>
+  </picture>
 
 </details>
 
