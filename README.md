@@ -33,7 +33,7 @@ Recognized for the ability to build relationships with key personnel using profo
     - Python: [python_to_gsheet.py](assets/scripts/python_to_gsheet.py)
     - Apps Script: [generateGoogleAdsLocation.gy](assets/scripts/generateGoogleAdsLocation.gs)
   * How It Works
-   - (please see below)
+    - (please see below)
   
   <picture>
     <img alt="Subscriber Report" src="assets/images/subscriber-report.PNG" width=800>
