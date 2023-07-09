@@ -12,6 +12,18 @@ Recognized for the ability to build relationships with key personnel using profo
 | Hard  | Google Sheet, Excel, MySQL, Looker Studio, Power BI, Python, JavaScript, Adobe Photoshop  |
 | Soft  | Adaptive, Critical thinking, Relationship Builder, Leadership, Project Management, Attention to details  |
 
+| Tables        | Are           | Cool  |
+| ------------- |:-------------:| -----:|
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
+
+| First Header  | Second Header |
+| ------------- | ------------- |
+| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |
+
+
 ## Sample Works
 
 <details>
