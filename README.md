@@ -31,7 +31,7 @@ Recognized for the ability to build relationships with key personnel using profo
     - Subscriber Status: [Google Sheets](https://docs.google.com/spreadsheets/d/1LK8hu4rqJrEYZoenyxN9AZSEBvD1mcgEq_ZD0u3Tp2I/edit?pli=1#gid=1288018274)
   * Scripts
     - Python: [python_to_gsheet.py](assets/scripts/python_to_gsheet.py) (web scraping)
-    - Apps Script: [generateGoogleAdsLocation.gy](assets/scripts/generateGoogleAdsLocation.gs), [generateCityStateLevel.gs](assets/scripts/generateCityStateLevel.gs)
+    - Apps Script: [generateGoogleAdsLocation.gs](assets/scripts/generateGoogleAdsLocation.gs), [generateCityStateLevel.gs](assets/scripts/generateCityStateLevel.gs)
   * How It Works
     - Using scripts and formulas (please see below)
   
