@@ -97,36 +97,12 @@ Recognized for the ability to build relationships with key personnel using profo
       ```
       - **ARRAYFORMULA()** - Iterate each row. ```IF()``` conditon was used to stop an iteration.
 
-      Since ```RANDARRAY()``` randomizes data each time changes has been made in the worksheet, we need to capture its data and paste it as a static value.
+      Since ```RANDARRAY()``` randomizes data each time changes has been made in the worksheet, we need to capture its data and paste it as a static value. We will be using the [generateGoogleAdsLocation.gy](assets/scripts/generateGoogleAdsLocation.gs) script to produce a static data.
 
-      We will be using this script to paste the a non-static data.
 
-     [generateGoogleAdsLocation.gy](assets/scripts/generateGoogleAdsLocation.gs)
-     ```javascript
-     function generateGoogleAdsLocation() {
-       var ss = SpreadsheetApp.getActiveSpreadsheet();
-       var sheet = ss.getSheetByName('Generate Location And Campaign');
-       var column = sheet.getRange('A2:C');
-       var values = column.getValues();
-        
-       var location = [];
-       var campaign = []
-       for(i=0; i<values.length; i++) {
-         if(values[i][0] != "" && values[i][1] !="") {
-           location.push([values[i][0] +", "+ values[i][1] + ", United States"]);
-           campaign.push([values[i][2]]);
-         }
-       }
-      
-       // Paste locations
-       var pasteSheet = ss.getSheetByName('Campaign');
-       pasteSheet.getRange(2, 1, location.length, location[0].length).clearContent();
-       pasteSheet.getRange(2, 1, location.length, location[0].length).setValues(location);
-      
-       // Paste campaigns
-       pasteSheet.getRange(2, 2, campaign.length, campaign[0].length).setValues(campaign);
-     }
-     ```
+  5. Create a [Subscriber Status](https://docs.google.com/spreadsheets/d/1LK8hu4rqJrEYZoenyxN9AZSEBvD1mcgEq_ZD0u3Tp2I/edit?pli=1#gid=1288018274) worksheet. Generate names using [python_to_gsheet.py](assets/scripts/python_to_gsheet.py) by web scraping most common names in [namecensus.com](namecensus.com).
+
+  6. Connect [Subscriber Status](https://docs.google.com/spreadsheets/d/1LK8hu4rqJrEYZoenyxN9AZSEBvD1mcgEq_ZD0u3Tp2I/edit?pli=1#gid=1288018274) worksheet to [Looker Studio](https://lookerstudio.google.com/reporting/c085222c-25ec-4874-aa92-b92bcbaa3f00/page/GKZWD).
     
 </details>
 
