@@ -56,8 +56,8 @@ Recognized for the ability to build relationships with key personnel using profo
        , TRUE)
      , 20, 2)
      ```
-      - **FILTER()** - First argument is the column range where we need to get the data from. Second and onwards are conditions that should be met.
-      - **REGEXMATCH()** - Uses the expression ```"[^A-Z]{2}$"``` that excludes the data from a list that contains two letters in uppercase from its last two characters. The US List contains the following.
+      - ```FILTER()``` - First argument is the column range where we need to get the data from. Second and onwards are conditions that should be met.
+      - ```REGEXMATCH()``` - Uses the expression ```"[^A-Z]{2}$"``` that excludes the data from a list that contains two letters in uppercase from its last two characters. The US List contains the following.
 
          We can get these areas by using the formula: ```=unique(filter(C:C, regexmatch(C:C, "[A-Z]{2}$")))``` inside the US List Sheet.
           ```
@@ -67,8 +67,8 @@ Recognized for the ability to build relationships with key personnel using profo
           FPO AA
           APO STA
           ```
-      - **RANDARRAY()** - Returns random numbers. It fills up both the row and column indicated. This is needed to randomize the sorting order of our data. The row count should be the same with the number of rows returned by the filter, hence the function ```COUNTA()``` was used.
-      - **ARRAY_CONSTRAIN(input_range, num_rows, num_cols)** - Limit the number of rows and columns being returned by the ```FILTER()``` function.
+      - ```RANDARRAY()``` - Returns random numbers. It fills up both the row and column indicated. This is needed to randomize the sorting order of our data. The row count should be the same with the number of rows returned by the filter, hence the function ```COUNTA()``` was used.
+      - ```ARRAY_CONSTRAIN(input_range, num_rows, num_cols)``` - Limit the number of rows and columns being returned by the ```FILTER()``` function.
           
   4. Create an [Ads Campaign](https://docs.google.com/spreadsheets/d/1fk9GCI8qUoEDceJkKiozZqUHPvUtqXsglgPUWy9Ys00/edit#gid=0) worksheet. Generate different locations from the Reduce List sheet and generate campaign names for each location.
 
@@ -89,18 +89,19 @@ Recognized for the ability to build relationships with key personnel using profo
        , TRUE)
      , 100,2)
      ```
-     - **IMPORTRANGE()** - Use the spreadsheet ID for a shorter ```spreadsheet_url```. This pulls data from a different worksheet and access permission should be accepted.
+     - ```IMPORTRANGE()``` - Use the spreadsheet ID for a shorter ```spreadsheet_url```. This pulls data from a different worksheet and access permission should be accepted.
+
+       > Since ```RANDARRAY()``` randomizes data each time changes has been made in the worksheet, we need to capture its data and paste it as a static value. We will be using the [generateGoogleAdsLocation.gy](assets/scripts/generateGoogleAdsLocation.gs) script to produce a static data.
   
       ['Generate Location And Campaign'!C2](https://docs.google.com/spreadsheets/d/1fk9GCI8qUoEDceJkKiozZqUHPvUtqXsglgPUWy9Ys00/edit#gid=738177274&range=C2)
       ```javascript
       =ARRAYFORMULA(IF(A2:A="",,"Campaign - " & iferror(1/(1/round(RANDBETWEEN(ROW(A1:A110), 100)/30)),1)))
       ```
-      - **ARRAYFORMULA()** - Iterate each row. ```IF()``` conditon was used to stop an iteration.
+      - ```ARRAYFORMULA()``` - Iterate each row. ```IF()``` conditon was used to stop an iteration.
+        
+        > Use ```ARRAYFORMULA()``` sparringly. This may cause worksheets to load indefinitely.
 
-      Since ```RANDARRAY()``` randomizes data each time changes has been made in the worksheet, we need to capture its data and paste it as a static value. We will be using the [generateGoogleAdsLocation.gy](assets/scripts/generateGoogleAdsLocation.gs) script to produce a static data.
-
-
-  5. Create a [Subscriber Status](https://docs.google.com/spreadsheets/d/1LK8hu4rqJrEYZoenyxN9AZSEBvD1mcgEq_ZD0u3Tp2I/edit?pli=1#gid=1288018274) worksheet. Generate names using [python_to_gsheet.py](assets/scripts/python_to_gsheet.py) by web scraping most common names in namecensus.com and using [generateCityStateLevel.gs](assets/scripts/generateCityStateLevel.gs) script to pipulate City, State and Level for each subscriber.
+  5. Create a [Subscriber Status](https://docs.google.com/spreadsheets/d/1LK8hu4rqJrEYZoenyxN9AZSEBvD1mcgEq_ZD0u3Tp2I/edit?pli=1#gid=1288018274) worksheet. Generate names using [python_to_gsheet.py](assets/scripts/python_to_gsheet.py) by web scraping most common names in namecensus.com and using [generateCityStateLevel.gs](assets/scripts/generateCityStateLevel.gs) script to populate City, State and Level for each subscriber.
 
   6. Connect [Subscriber Status](https://docs.google.com/spreadsheets/d/1LK8hu4rqJrEYZoenyxN9AZSEBvD1mcgEq_ZD0u3Tp2I/edit?pli=1#gid=1288018274) worksheet to [Looker Studio](https://lookerstudio.google.com/reporting/c085222c-25ec-4874-aa92-b92bcbaa3f00/page/GKZWD).
     
