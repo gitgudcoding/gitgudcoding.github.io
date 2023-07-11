@@ -45,7 +45,7 @@ Recognized for the ability to build relationships with key personnel using profo
      Create another sheet named [Reduce List](https://docs.google.com/spreadsheets/d/1P2oIZsxwsV8IrUEutHvUlIXO7e928WH_FZWHzeLMMEo/edit#gid=314707040) and this is where we will be using our formula.
      
      ['Reduce List!A2](https://docs.google.com/spreadsheets/d/1P2oIZsxwsV8IrUEutHvUlIXO7e928WH_FZWHzeLMMEo/edit#gid=314707040&range=A2)
-     ```python
+     ```javascript
      =ARRAY_CONSTRAIN(
        SORT(
          FILTER('US List'!C:D, 'US List'!C:C<>"", REGEXMATCH('US List'!C:C, "[^A-Z]{2}$")),
