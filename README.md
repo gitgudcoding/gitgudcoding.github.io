@@ -100,9 +100,11 @@ Recognized for the ability to build relationships with key personnel using profo
         
         > Use ```ARRAYFORMULA()``` sparringly. This may cause worksheets to load indefinitely.
 
-  5. Create a [Subscriber Status](https://docs.google.com/spreadsheets/d/1LK8hu4rqJrEYZoenyxN9AZSEBvD1mcgEq_ZD0u3Tp2I/edit?pli=1#gid=1288018274) worksheet. Generate names using [python_to_gsheet.py](assets/scripts/python_to_gsheet.py) by web scraping most common names in namecensus.com and using [generateCityStateLevel.gs](assets/scripts/generateCityStateLevel.gs) script to populate City, State and Level for each subscriber.
+  5. Create a [Subscriber Status](https://docs.google.com/spreadsheets/d/1LK8hu4rqJrEYZoenyxN9AZSEBvD1mcgEq_ZD0u3Tp2I/edit?pli=1#gid=1288018274) worksheet.
+    
+  6. Generate names using [python_to_gsheet.py](assets/scripts/python_to_gsheet.py) by web scraping the most common names in namecensus.com and using [generateCityStateLevel.gs](assets/scripts/generateCityStateLevel.gs) script to populate City, State and Level for each subscriber.
 
-  6. Connect [Subscriber Status](https://docs.google.com/spreadsheets/d/1LK8hu4rqJrEYZoenyxN9AZSEBvD1mcgEq_ZD0u3Tp2I/edit?pli=1#gid=1288018274) worksheet to [Looker Studio](https://lookerstudio.google.com/reporting/c085222c-25ec-4874-aa92-b92bcbaa3f00/page/GKZWD).
+  7. Connect [Subscriber Status](https://docs.google.com/spreadsheets/d/1LK8hu4rqJrEYZoenyxN9AZSEBvD1mcgEq_ZD0u3Tp2I/edit?pli=1#gid=1288018274) worksheet to [Looker Studio](https://lookerstudio.google.com/reporting/c085222c-25ec-4874-aa92-b92bcbaa3f00/page/GKZWD).
     
 </details>
 
